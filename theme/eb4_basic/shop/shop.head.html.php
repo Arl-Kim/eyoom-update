@@ -80,27 +80,27 @@ $item_view = 'zoom';
                                     <?php if ($is_admin) {  ?>
                                 <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
                                     <?php }  ?>
-                                <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
+                                <li><a href="#">홍길동님 11,181,887 P2U</a></li>
+                                <li><a href="<?php echo G5_SHOP_URL; ?>/cart.php">장바구니</a></li>
+                                <li><a href="<?php echo G5_URL; ?>/mypage/">마이페이지</a></li>
+                                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
                                 <?php } else {  ?>
                                 <li><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="fas fa-unlock-alt"></i>로그인</a></li>
                                 <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fas fa-user-plus"></i>회원가입</a></li>
                                 <?php }  ?>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-plus-circle"></i>추가메뉴
+                                        더보기
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a href="<?php echo G5_SHOP_URL; ?>/cart.php">장바구니</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/wishlist.php">위시리스트</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/orderinquiry.php">주문/배송조회</a>
-                                        <a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">쿠폰존</a>
+                                        <a href="<?php echo G5_SHOP_URL; ?>/#">이벤트</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/personalpay.php">개인결제</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/itemuselist.php">사용후기</a>
-                                        <a href="<?php echo G5_BBS_URL ?>/faq.php">자주묻는 질문</a>
+                                        <a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a>
                                         <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
-                                        <?php if ($is_member) { // 회원일 경우 ?>
-                                        <a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">회원정보수정</a>
-                                        <?php } ?>
                                     </div>
                                 </li>
                                 <li>
@@ -110,8 +110,8 @@ $item_view = 'zoom';
                                             <input type="hidden" name="sop" value="and">
                                             <label for="search_input" class="sound_only">검색어 입력 필수</strong></label>
                                             <div class="input input-button">
-                                                <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="search_input" class="sch_stx" placeholder="상품 검색어 입력">
-                                                <div class="button"><input type="submit"><i class="fas fa-search"></i></div>
+                                                <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="search_input" class="sch_stx" placeholder="상품명 검색">
+                                                <div class="button"><input type="submit"><i class="fa fa-search"></i></div>
                                             </div>
                                         </form>
                                     </div>
@@ -124,10 +124,14 @@ $item_view = 'zoom';
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="top-header-nav list-unstyled thn-start">
                             <?php if ($eyoom['use_shop_index'] == 'n') { ?>
-                            <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>"><span class="deactivate">커뮤니티</span></a></li>
+                            <li class="cs-nav c-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">전체상품</span></a></li>
                             <?php } ?>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>" class="disabled"><span class="activate">쇼핑몰</span></a></li>
-                            <li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php"><i class="fas fa-ticket-alt"></i>쿠폰존</a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">P2U소개</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">히트상품</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">브랜드관</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">추석선물</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="activate">이벤트</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="activate">공모전</span></a></li>
                             <?php if ($is_admin) { // 관리자일 경우 ?>
                             <li>
                                 <div class="eyoom-form">
