@@ -1,1 +1,32 @@
 /* 여기에 작업 또는 수정할 당신의 css style을 설정하세요. (customizations) */
+
+.top-header .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header .container .top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header .container .top-container .logo-container img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.top-header-nav .cs-nav span {
+    color: #17191E;
+    border-left: none;
+    border-right: none;
+}
+
+.top-header-nav .cs-nav span.activate {
+    color: #5D2C83;
+}
+
+.top-header-nav .cs-nav span.deactivate {
+    background: #fff;
+    color: #17191E;
+    border-right: none;
+}
