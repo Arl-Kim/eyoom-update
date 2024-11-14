@@ -1,13 +1,22 @@
 /* 여기에 작업 또는 수정할 당신의 css style을 설정하세요. (customizations) */
 
+.top-header {
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .top-header .container {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .top-header .container .top-container {
     display: flex;
     justify-content: space-between;
+    gap: 300px;
 }
 
 .top-header .container .top-container .logo-container img {
@@ -15,18 +24,60 @@
     max-height: 100px;
 }
 
-.top-header-nav .cs-nav span {
-    color: #17191E;
-    border-left: none;
-    border-right: none;
+.nav-search-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-width: fit-content;
 }
 
-.top-header-nav .cs-nav span.activate {
-    color: #5D2C83;
+.nav-search-container .col-lg-6 {
+    width: 500px;
 }
 
-.top-header-nav .cs-nav span.deactivate {
-    background: #fff;
+.nav-search-container .col-lg-6 ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-container .col-lg-6 ul li a {
     color: #17191E;
-    border-right: none;
+}
+
+.nav-search-container .col-lg-6 ul li a:hover {
+    color: #A445DE;
+}
+
+.nav-search-container .col-lg-6 ul li a span {
+    color: #A445DE;
+}
+
+.nav-search-container .col-lg-6 ul li.dropdown .dropdown-menu {
+    border-radius: 5px;
+}
+
+.nav-search-container .col-lg-6 ul li.dropdown .dropdown-menu a {
+    color: #17191E;
+}
+
+.nav-search-container .col-lg-6 ul li.dropdown .dropdown-menu a:hover {
+    background-color: #F7F3FF;
+}
+
+.nav-search-container .header-title-search {
+    margin-top: 15px;
+}
+
+.nav-search-container .header-title-search form .input-button input {
+    background-color: #F8F9FC;
+    color: #17191E;
+    width: 200px;
+    border: none;
+    border-radius: 50px;
+}
+
+.nav-search-container .header-title-search form .input-button .button {
+    background: #F8F9FC;
+    border-radius: 50px;
+    border: none;
 }
