@@ -80,7 +80,7 @@ $item_view = 'zoom';
                                     <?php if ($is_admin) {  ?>
                                 <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
                                     <?php }  ?>
-                                <li><a href="#">홍길동님 11,181,887 P2U</a></li>
+                                <li><a href="#">홍길동님 <span>11,181,887 P2U</span></a></li>
                                 <li><a href="<?php echo G5_SHOP_URL; ?>/cart.php">장바구니</a></li>
                                 <li><a href="<?php echo G5_URL; ?>/mypage/">마이페이지</a></li>
                                 <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
@@ -103,20 +103,18 @@ $item_view = 'zoom';
                                         <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="header-title-search d-none d-lg-block">
-                                        <form name="frmsearch1" action="<?php echo G5_SHOP_URL; ?>/search.php" onsubmit="return search_submit(this);" class="eyoom-form">
-                                            <input type="hidden" name="sfl" value="wr_subject||wr_content">
-                                            <input type="hidden" name="sop" value="and">
-                                            <label for="search_input" class="sound_only">검색어 입력 필수</strong></label>
-                                            <div class="input input-button">
-                                                <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="search_input" class="sch_stx" placeholder="상품명 검색">
-                                                <div class="button"><input type="submit"><i class="fa fa-search"></i></div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
                             </ul>
+                        </div>
+                        <div class="header-title-search d-none d-lg-block">
+                            <form name="frmsearch1" action="<?php echo G5_SHOP_URL; ?>/search.php" onsubmit="return search_submit(this);" class="eyoom-form">
+                                <input type="hidden" name="sfl" value="wr_subject||wr_content">
+                                <input type="hidden" name="sop" value="and">
+                                <label for="search_input" class="sound_only">검색어 입력 필수</strong></label>
+                                <div class="input input-button">
+                                    <input type="text" name="q" value="<?php echo stripslashes(get_text(get_search_string($q))); ?>" id="search_input" class="sch_stx" placeholder="상품명 검색">
+                                    <div class="button"><input type="submit"><i class="fa fa-search"></i></div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
