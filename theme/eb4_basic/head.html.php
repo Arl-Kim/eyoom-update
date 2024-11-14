@@ -34,109 +34,112 @@ $is_megamenu = 'yes';
     <header class="header-wrap <?php if(!defined('_INDEX_')) { ?>page-header-wrap<?php } ?>">
         <div class="top-header">
             <div class="container">
-                <div class="logo-container">
-                <?php /* ===== 사이트 로고 시작 ===== */ ?>
-                    <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
-                        <div class="adm-edit-btn btn-edit-mode" style="top:0;left:12px;text-align:left">
-                            <div class="btn-group">
-                                <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>&amp;wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-btn-l"><i class="far fa-edit"></i> 로고 설정</a>
-                                <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>" target="_blank" class="ae-btn-r" title="새창 열기">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
+                <div class="top-container">
+                    <div class="logo-container">
+                    <?php /* ===== 사이트 로고 시작 ===== */ ?>
+                        <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
+                            <div class="adm-edit-btn btn-edit-mode" style="top:0;left:12px;text-align:left">
+                                <div class="btn-group">
+                                    <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>&amp;wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-btn-l"><i class="far fa-edit"></i> 로고 설정</a>
+                                    <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&amp;pid=biz_info&amp;amode=logo&amp;thema=<?php echo $theme; ?>" target="_blank" class="ae-btn-r" title="새창 열기">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    <?php } ?>
-                    <a href="<?php echo G5_URL; ?>" class="title-logo">
-                    <?php if ($logo == 'text') { ?>
-                        <h1><?php echo $config['cf_title']; ?></h1>
-                    <?php } else if ($logo == 'image') { ?>
-                        <?php if (!G5_IS_MOBILE) { ?>
-                        <?php if (file_exists($top_logo) && !is_dir($top_logo)) { ?>
-                        <img src="<?php echo $logo_src['top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
-                        <?php } else { ?>
-                        <img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
                         <?php } ?>
-                        <?php } else { ?>
-                        <?php if (file_exists($top_mobile_logo) && !is_dir($top_mobile_logo)) { ?>
-                        <img src="<?php echo $logo_src['mobile_top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
-                        <?php } else { ?>
-                        <img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+                        <a href="<?php echo G5_URL; ?>" class="title-logo">
+                        <?php if ($logo == 'text') { ?>
+                            <h1><?php echo $config['cf_title']; ?></h1>
+                        <?php } else if ($logo == 'image') { ?>
+                            <?php if (!G5_IS_MOBILE) { ?>
+                            <?php if (file_exists($top_logo) && !is_dir($top_logo)) { ?>
+                            <img src="<?php echo $logo_src['top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+                            <?php } else { ?>
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+                            <?php } ?>
+                            <?php } else { ?>
+                            <?php if (file_exists($top_mobile_logo) && !is_dir($top_mobile_logo)) { ?>
+                            <img src="<?php echo $logo_src['mobile_top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+                            <?php } else { ?>
+                            <img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+                            <?php } ?>
+                            <?php } ?>
                         <?php } ?>
-                        <?php } ?>
-                    <?php } ?>
-                    </a>
-                <?php /* ===== 사이트 로고 끝 ===== */ ?>
-                </div>
-                <div class="nav-search-container row align-items-center position-relative">
-                    
-                    <div class="col-lg-6 clearfix">
-                        <ul class="top-header-nav list-unstyled thn-end">
-                            <?php if ($is_member) {  ?>
-                                <?php if ($is_admin) {  ?>
-                            <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
+                        </a>
+                    <?php /* ===== 사이트 로고 끝 ===== */ ?>
+                    </div>
+                    <div class="nav-search-container row align-items-center position-relative">
+                        <div class="col-lg-6 clearfix">
+                            <ul class="top-header-nav list-unstyled thn-end">
+                                <?php if ($is_member) {  ?>
+                                    <?php if ($is_admin) {  ?>
+                                <li><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>"><i class="fas fa-cog text-crimson"></i>관리자</a></li>
+                                    <?php }  ?>
+                                <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
+                                <?php } else {  ?>
+                                <li><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="fas fa-unlock-alt"></i>로그인</a></li>
+                                <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fas fa-user-plus"></i>회원가입</a></li>
                                 <?php }  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="fas fa-sign-out-alt"></i>로그아웃</a></li>
-                            <?php } else {  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="fas fa-unlock-alt"></i>로그인</a></li>
-                            <li><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fas fa-user-plus"></i>회원가입</a></li>
-                            <?php }  ?>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-plus-circle"></i>추가메뉴
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a href="<?php echo G5_BBS_URL ?>/new.php">새글</a>
-                                    <a href="<?php echo G5_BBS_URL ?>/best.php">인기게시물</a>
-                                    <a href="<?php echo G5_BBS_URL ?>/faq.php">자주묻는 질문</a>
-                                    <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
-                                    <?php if ($is_member) { // 회원일 경우 ?>
-                                    <a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">회원정보수정</a>
-                                    <?php } ?>
-                                </div>
-                            </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-plus-circle"></i>추가메뉴
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a href="<?php echo G5_BBS_URL ?>/new.php">새글</a>
+                                        <a href="<?php echo G5_BBS_URL ?>/best.php">인기게시물</a>
+                                        <a href="<?php echo G5_BBS_URL ?>/faq.php">자주묻는 질문</a>
+                                        <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
+                                        <?php if ($is_member) { // 회원일 경우 ?>
+                                        <a href="<?php echo G5_BBS_URL; ?>/member_confirm.php?url=register_form.php">회원정보수정</a>
+                                        <?php } ?>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-title-search d-none d-lg-block">
+                                        <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL; ?>/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
+                                            <input type="hidden" name="sfl" value="wr_subject||wr_content">
+                                            <input type="hidden" name="sop" value="and">
+                                            <label for="modal_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
+                                            <div class="input input-button">
+                                                <input type="text" name="stx" id="modal_sch_stx" class="sch_stx" maxlength="20" placeholder="전체 게시판 검색">
+                                                <div class="button"><input type="submit"><i class="fas fa-search"></i></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-container">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <ul class="top-header-nav list-unstyled thn-start">
+                        <?php if ($eyoom['is_shop_theme'] == 'y') { ?>
+                            <?php if (defined('_SHOP_') && $eyoom['use_layout_community'] == 'y') { ?>
+                            <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>"><span class="deactivate">커뮤니티</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>" class="disabled"><span class="activate">쇼핑몰</span></a></li>
+                            <?php } else if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
+                            <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>" class="disabled"><span class="activate">커뮤니티</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>"><span class="deactivate">쇼핑몰</span></a></li>
+                            <?php } ?>
+                        <?php } ?>
                             <li>
-                                <div class="header-title-search d-none d-lg-block">
-                                    <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL; ?>/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
-                                        <input type="hidden" name="sfl" value="wr_subject||wr_content">
-                                        <input type="hidden" name="sop" value="and">
-                                        <label for="modal_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
-                                        <div class="input input-button">
-                                            <input type="text" name="stx" id="modal_sch_stx" class="sch_stx" maxlength="20" placeholder="전체 게시판 검색">
-                                            <div class="button"><input type="submit"><i class="fas fa-search"></i></div>
-                                        </div>
-                                    </form>
+                                <?php echo eb_connect('basic_top'); ?>
+                            </li>
+                            <?php if ($is_admin) { // 관리자일 경우 ?>
+                            <li>
+                                <div class="eyoom-form">
+                                    <input type="hidden" name="edit_mode" id="edit_mode" value="<?php echo $eyoom_default['edit_mode']; ?>">
+                                    <label class="toggle">
+                                        <input type="checkbox" id="btn_edit_mode" <?php echo $eyoom_default['edit_mode'] == 'on' ? 'checked':''; ?>><i></i><span class="text-black"><span class="fas fa-sliders-h m-r-5"></span>편집모드</span>
+                                    </label>
                                 </div>
                             </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-6 d-none d-lg-block">
-            <ul class="top-header-nav list-unstyled thn-start">
-            <?php if ($eyoom['is_shop_theme'] == 'y') { ?>
-                <?php if (defined('_SHOP_') && $eyoom['use_layout_community'] == 'y') { ?>
-                <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>"><span class="deactivate">커뮤니티</span></a></li>
-                <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>" class="disabled"><span class="activate">쇼핑몰</span></a></li>
-                <?php } else if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
-                <li class="cs-nav c-nav"><a href="<?php echo G5_URL; ?>" class="disabled"><span class="activate">커뮤니티</span></a></li>
-                <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>"><span class="deactivate">쇼핑몰</span></a></li>
-                <?php } ?>
-            <?php } ?>
-                <li>
-                    <?php echo eb_connect('basic_top'); ?>
-                </li>
-                <?php if ($is_admin) { // 관리자일 경우 ?>
-                <li>
-                    <div class="eyoom-form">
-                        <input type="hidden" name="edit_mode" id="edit_mode" value="<?php echo $eyoom_default['edit_mode']; ?>">
-                        <label class="toggle">
-                            <input type="checkbox" id="btn_edit_mode" <?php echo $eyoom_default['edit_mode'] == 'on' ? 'checked':''; ?>><i></i><span class="text-black"><span class="fas fa-sliders-h m-r-5"></span>편집모드</span>
-                        </label>
-                    </div>
-                </li>
-                <?php } ?>
-            </ul>
         </div>
         <div class="header-title">
             <div class="container">
