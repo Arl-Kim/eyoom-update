@@ -125,12 +125,12 @@ $item_view = 'zoom';
                                 <a href="<?php echo G5_SHOP_URL; ?>/#">
                                     <span class="deactivate"><i class="fa fa-bars" aria-hidden="true"></i>전체상품</span>
                                 </a>
-                                <ul>
+                                <ul class="submenu">
                                     <li class="dropdown">
                                         <a href="<?php echo G5_SHOP_URL; ?>/#">뷰티/피부
                                             <i class="fa fa-chevron-right"></i>
                                         </a>
-                                        <ul>
+                                        <ul class="submenu-menu">
                                             <li><a href="<?php echo G5_SHOP_URL; ?>/#">스킨케어<i class="fa fa-chevron-right"></i></a></li>
                                             <li class="dropdown">
                                                 <a href="<?php echo G5_SHOP_URL; ?>/#">메이크업
