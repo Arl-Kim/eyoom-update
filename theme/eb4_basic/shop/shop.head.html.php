@@ -99,8 +99,8 @@ $item_view = 'zoom';
                                         <a href="<?php echo G5_SHOP_URL; ?>/#">이벤트</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/personalpay.php">개인결제</a>
                                         <a href="<?php echo G5_SHOP_URL; ?>/itemuselist.php">사용후기</a>
-                                        <a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a>
-                                        <a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a>
+                                        <a href="<?php echo G5_BBS_URL; ?>/faq.php">FAQ</a>
+                                        <a href="<?php echo G5_BBS_URL; ?>/qalist.php">1:1문의</a>
                                     </div>
                                 </li>
                             </ul>
@@ -121,15 +121,55 @@ $item_view = 'zoom';
                 <div class="bottom-container">
                     <div class="col-lg-6 d-none d-lg-block">
                         <ul class="top-header-nav list-unstyled thn-start">
-                            <?php if ($eyoom['use_shop_index'] == 'n') { ?>
-                            <li class="cs-nav c-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">전체상품</span></a></li>
-                            <?php } ?>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">P2U소개</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">히트상품</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">브랜드관</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#" class="disabled"><span class="activate">추석선물</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="activate">이벤트</span></a></li>
-                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="activate">공모전</span></a></li>
+                            <li class="dropdown cs-nav c-nav">
+                                <a href="<?php echo G5_SHOP_URL; ?>/#">
+                                    <span class="deactivate"><i class="fa fa-bars" aria-hidden="true"></i>전체상품</span>
+                                </a>
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="<?php echo G5_SHOP_URL; ?>/#">뷰티/피부
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li><a href="<?php echo G5_SHOP_URL; ?>/#">스킨케어<i class="fa fa-chevron-right"></i></a></li>
+                                            <li class="dropdown">
+                                                <a href="<?php echo G5_SHOP_URL; ?>/#">메이크업
+                                                    <i class="fa fa-chevron-right"></i>
+                                                </a>
+                                                <ul>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">클렌징<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">스킨/토너/미스트<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">로션/에멀젼<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">에센스/세럼<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">크림/오일<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">마스크/팩/스틱제품<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">선케어(자외선차단)<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">화장품세트<i class="fa fa-chevron-right"></i></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="<?php echo G5_SHOP_URL; ?>/#">헤어/바디<i class="fa fa-chevron-right"></i></a></li>
+                                            <li><a href="<?php echo G5_SHOP_URL; ?>/#">남성전용 화장품<i class="fa fa-chevron-right"></i></a></li>
+                                            <li><a href="<?php echo G5_SHOP_URL; ?>/#">향수<i class="fa fa-chevron-right"></i></a></li>
+                                            <li><a href="<?php echo G5_SHOP_URL; ?>/#">뷰티기기/소품<i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">신선푸드<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">가공푸드<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">패션잡화<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">디지털 가전<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">생활/건강<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">가구/인테리어<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">자동차/공구<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">취미/여행<i class="fa fa-chevron-right"></i></a></li>
+                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">추석선물</a></li>
+                                </ul>
+                            </li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">P2U소개</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">히트상품</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">브랜드관</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">추석선물</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">이벤트</span></a></li>
+                            <li class="cs-nav s-nav"><a href="<?php echo G5_SHOP_URL; ?>/#"><span class="deactivate">공모전</span></a></li>
                             <?php if ($is_admin) { // 관리자일 경우 ?>
                             <li>
                                 <div class="eyoom-form">
