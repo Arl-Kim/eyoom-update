@@ -1,15 +1,18 @@
 /* 여기에 작업 또는 수정할 당신의 css style을 설정하세요. (customizations) */
 
+/*Header Custom Styles*/
+
 .top-header {
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    border-bottom-width: 2px;
 }
 
 .top-header .container {
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
     gap: 10px;
 }
 
@@ -81,3 +84,43 @@
     border-radius: 50px;
     border: none;
 }
+
+.top-header .container .bottom-container {
+    display: flex;
+}
+
+.bottom-container .col-lg-6 {
+    width: 800px;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav {
+    margin-right: 0;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav a span {
+    color: #17191E;
+    font-weight: 700;
+    border: none;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav a span.deactivate {
+    background: none;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav a span:hover,
+.bottom-container .col-lg-6 .top-header-nav .cs-nav a span.activate {
+    color: #A445DE;
+    border-bottom: 2px solid #A445DE;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav.dropdown a span i {
+    color: #17191E;
+    position: relative;
+    right: 10px;
+}
+
+.bottom-container .col-lg-6 .top-header-nav .cs-nav a span:hover i {
+    color: #A445DE;
+}
+
+/*Submenu/Dropdown Menu Styles*/
