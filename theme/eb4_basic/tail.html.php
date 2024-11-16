@@ -109,15 +109,15 @@ if (!defined('_EYOOM_')) exit;
 				<?php } ?>
 				<div class="business-info">
 				<div class="info-group">
-						<strong class="text-black">CS CENTER 1522-2041</strong>
+						<span>CS CENTER 1522-2041</span>
 						<span class="info-divider">|</span>
 						<span>평일 10:00 ~ 17:00 (점심 12:00 ~ 13:00)</span>
 					</div>
 					
 					<div class="info-group">
-						<span><a href="mailto:<?php echo $bizinfo['bi_cs_email']; ?>"><?php echo $bizinfo['bi_cs_email']; ?></a></span>
+						<span class="togrey"><a href="mailto:<?php echo $bizinfo['bi_cs_email']; ?>"><?php echo $bizinfo['bi_cs_email']; ?></a></span>
 						<span class="info-divider">|</span>
-						<span>토요일, 일요일, 공휴일은 휴무입니다. 근무시간 이후 문의는 1:1 문의를 이용해주세요.</span>
+						<span class="togrey">토요일, 일요일, 공휴일은 휴무입니다. 근무시간 이후 문의는 1:1 문의를 이용해주세요.</span>
 					</div>
 
 					<div class="info-group">
@@ -127,17 +127,17 @@ if (!defined('_EYOOM_')) exit;
 					</div>
 
 					<div class="info-group">
-						<span>사업자등록번호 : <?php echo $bizinfo['bi_company_bizno']; ?></span>
+						<span class="togrey">사업자등록번호 : <?php echo $bizinfo['bi_company_bizno']; ?></span>
 						<span class="info-divider">|</span>
-						<span>통신판매업 : 제2024-서울금천-0326호</span>
+						<span class="togrey">통신판매업 : 제2024-서울금천-0326호</span>
 						<span class="info-divider">|</span>
-						<span>주소 : 08502 서울 금천구 가산디지털1로 212 202-52호 (가산동, 코오롱디지털타워애스턴)</span>
+						<span class="togrey">주소 : 08502 서울 금천구 가산디지털1로 212 202-52호 (가산동, 코오롱디지털타워애스턴)</span>
 					</div>
 					
-					<div class="footer-copyright">
-						<span>Copyright </span>&copy; <strong class="text-black f-w-400">P2U :: 포인투유. All Rights Reserved</strong>
+					<div class="footer-copyright info-group">
+						<span class="togrey">Copyright &copy;</span> <span class="togrey">P2U :: 포인투유. All Rights Reserved</span>
 					</div>
-					<div class="terms-policy">
+					<div class="terms-policy info-group">
 						<a href="<?php echo get_eyoom_pretty_url('page','provision'); ?>">서비스이용약관</a>
 						<a href="<?php echo get_eyoom_pretty_url('page','privacy'); ?>">개인정보처리방침</a>
 						<a href="<?php echo get_eyoom_pretty_url('page','noemail'); ?>">이메일무단수집거부</a>
