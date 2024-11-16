@@ -141,6 +141,27 @@
     display: block;
 }
 
+.submenu li a {
+    color: #17191E;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: #17191E;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.submenu li a i,
+.submenu-menu li a i {
+    color: #9DA6BB;
+    margin-left: 20px;
+}
+
+.submenu li a:hover i {
+    color: #FFF;
+}
+
 .bottom-container .col-lg-6 .top-header-nav .submenu .submenu-menu {
     display: none;
     position: absolute;
@@ -150,6 +171,19 @@
     border-radius: 5px;
     padding: 15px;
     z-index: 2;
+}
+
+.submenu-menu li a {
+    color: #17191E;
+}
+
+.submenu-menu li a:hover {
+    background: #F8F9FC;
+    color: #A445DE;
+}
+
+.submenu-menu li a:hover i {
+    color: #A445DE;
 }
 
 .bottom-container .col-lg-6 .top-header-nav .submenu li:hover > .submenu-menu {
