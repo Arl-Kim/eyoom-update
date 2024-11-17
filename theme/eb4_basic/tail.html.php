@@ -114,7 +114,7 @@ if (!defined('_EYOOM_')) exit;
 						<span>평일 10:00 ~ 17:00 (점심 12:00 ~ 13:00)</span>
 					</div>
 					
-					<div class="info-group">
+					<div class="info-group bottom-margin">
 						<span class="togrey"><a href="mailto:<?php echo $bizinfo['bi_cs_email']; ?>"><?php echo $bizinfo['bi_cs_email']; ?></a></span>
 						<span class="info-divider">|</span>
 						<span class="togrey">토요일, 일요일, 공휴일은 휴무입니다. 근무시간 이후 문의는 1:1 문의를 이용해주세요.</span>
@@ -126,7 +126,7 @@ if (!defined('_EYOOM_')) exit;
 						<span>대표 : 최병호</span>
 					</div>
 
-					<div class="info-group">
+					<div class="info-group bottom-margin">
 						<span class="togrey">사업자등록번호 : <?php echo $bizinfo['bi_company_bizno']; ?></span>
 						<span class="info-divider">|</span>
 						<span class="togrey">통신판매업 : 제2024-서울금천-0326호</span>

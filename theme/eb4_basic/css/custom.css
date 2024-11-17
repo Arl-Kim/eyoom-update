@@ -251,8 +251,17 @@
     color: #FFF;
 }
 
+.footer-cont-info .business-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-cont-info .business-info .info-group {
     text-align: left;
+}
+
+.footer-cont-info .business-info .bottom-margin {
+    margin-bottom: 20px;
 }
 
 .footer-copyright span.togrey {
