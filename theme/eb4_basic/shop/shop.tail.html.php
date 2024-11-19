@@ -36,15 +36,15 @@ if (!defined('_EYOOM_')) exit;
 					<?php } else if ($logo == 'image') { ?>
 						<?php if (!G5_IS_MOBILE) { ?>
 						<?php if (file_exists($top_logo) && !is_dir($top_logo)) { ?>
-						<img src="<?php echo $logo_src['top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+						<img src="<?php echo $logo_src['bottom']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
 						<?php } else { ?>
-						<img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/image/p2u_footer_logo.png" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
 						<?php } ?>
 						<?php } else { ?>
 						<?php if (file_exists($top_mobile_logo) && !is_dir($top_mobile_logo)) { ?>
-						<img src="<?php echo $logo_src['mobile_top']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+						<img src="<?php echo $logo_src['mobile_bottom']; ?>" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
 						<?php } else { ?>
-						<img src="<?php echo EYOOM_THEME_URL; ?>/image/site_logo.svg" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
+						<img src="<?php echo EYOOM_THEME_URL; ?>/image/p2u_footer_logo.png" class="site-logo" alt="<?php echo $config['cf_title']; ?>">
 						<?php } ?>
 						<?php } ?>
 					<?php } ?>
