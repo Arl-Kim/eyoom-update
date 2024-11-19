@@ -138,7 +138,18 @@
 }
 
 .bottom-container .col-lg-6 .top-header-nav li:hover > .submenu {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.submenu li {
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+.submenu li:hover {
+    background-color: #17191E;
+    border-radius: 5px;
 }
 
 .submenu li a {
@@ -146,10 +157,12 @@
     white-space: nowrap;
 }
 
-.submenu li a:hover {
-    background-color: #17191E;
+.submenu li:hover a {
     color: #FFF;
-    border-radius: 5px;
+}
+
+.submenu li:hover .submenu-menu li a {
+    color: #17191E;
 }
 
 .submenu li a i,
@@ -158,8 +171,16 @@
     margin-left: 20px;
 }
 
-.submenu li a:hover i {
+.submenu li:hover a i {
     color: #FFF;
+}
+
+.submenu li:hover .submenu-menu li a i {
+    color: #9DA6BB;
+}
+
+.submenu li:hover .submenu-menu li:hover a i {
+    color: #A445DE;
 }
 
 .bottom-container .col-lg-6 .top-header-nav .submenu .submenu-menu {
@@ -173,21 +194,22 @@
     z-index: 2;
 }
 
+.submenu-menu li:hover {
+    background-color: #F8F9FC;
+    border-radius: 5px;
+}
+
 .submenu-menu li a {
     color: #17191E;
 }
 
-.submenu-menu li a:hover {
-    background: #F8F9FC;
-    color: #A445DE;
-}
-
-.submenu-menu li a:hover i {
+.submenu-menu li:hover a {
     color: #A445DE;
 }
 
 .bottom-container .col-lg-6 .top-header-nav .submenu li:hover > .submenu-menu {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 }
 
 .bottom-container .col-lg-6 .top-header-nav .submenu .submenu-menu ul {
@@ -202,7 +224,12 @@
 }
 
 .bottom-container .col-lg-6 .top-header-nav .submenu .submenu-menu li:hover > ul {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.bottom-container .col-lg-6 .top-header-nav .submenu .submenu-menu li:hover > ul li:hover a {
+    color: #A445DE;
 }
 
 /*Footer Custom Styles*/

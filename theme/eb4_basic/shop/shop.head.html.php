@@ -137,14 +137,14 @@ $item_view = 'zoom';
                                                     <i class="fa fa-chevron-right"></i>
                                                 </a>
                                                 <ul>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">클렌징<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">스킨/토너/미스트<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">로션/에멀젼<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">에센스/세럼<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">크림/오일<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">마스크/팩/스틱제품<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">선케어(자외선차단)<i class="fa fa-chevron-right"></i></a></li>
-                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">화장품세트<i class="fa fa-chevron-right"></i></a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">클렌징</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">스킨/토너/미스트</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">로션/에멀젼</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">에센스/세럼</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">크림/오일</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">마스크/팩/스틱제품</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">선케어(자외선차단)</a></li>
+                                                    <li><a href="<?php echo G5_SHOP_URL; ?>/#">화장품세트</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="<?php echo G5_SHOP_URL; ?>/#">헤어/바디<i class="fa fa-chevron-right"></i></a></li>
