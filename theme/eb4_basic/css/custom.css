@@ -131,6 +131,7 @@
     top: 5px;
     left: 0;
     background: #FFF;
+    border: 1px solid #17191E;
     border-radius: 5px;
     padding: 15px;
     margin-top: 30px;
@@ -189,6 +190,7 @@
     top: 0;
     left: 100%;
     background: #FFF;
+    border: 1px solid #17191E;
     border-radius: 5px;
     padding: 15px;
     z-index: 2;
@@ -218,6 +220,7 @@
     top: 0;
     left: 100%;
     background: #FFF;
+    border: 1px solid #17191E;
     border-radius: 5px;
     padding: 15px;
     z-index: 3;
